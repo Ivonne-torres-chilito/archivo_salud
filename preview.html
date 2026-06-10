@@ -11,292 +11,443 @@
             box-sizing: border-box;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-            background-color: #0d1117;
-            color: #c9d1d9;
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', sans-serif;
+            background-color: #FFFFFF;
+            color: #1a472a;
             line-height: 1.6;
         }
 
+        /* Navbar */
         .navbar {
-            background-color: #161b22;
-            border-bottom: 1px solid #30363d;
-            padding: 16px 0;
+            background: linear-gradient(135deg, #0F8A43 0%, #0d6d36 100%);
+            padding: 20px 0;
             position: sticky;
             top: 0;
             z-index: 100;
+            box-shadow: 0 2px 12px rgba(15, 138, 67, 0.15);
         }
 
         .navbar-content {
             max-width: 1400px;
             margin: 0 auto;
-            padding: 0 16px;
+            padding: 0 32px;
             display: flex;
             align-items: center;
-            gap: 16px;
+            gap: 20px;
         }
 
         .logo {
             display: flex;
             align-items: center;
-            gap: 8px;
-            font-weight: 600;
-            color: #58a6ff;
+            gap: 12px;
+            font-weight: 700;
+            color: #FFFFFF;
             text-decoration: none;
+            font-size: 18px;
+        }
+
+        .logo-icon {
+            font-size: 32px;
+        }
+
+        .navbar-divider {
+            width: 1px;
+            height: 30px;
+            background-color: rgba(255, 255, 255, 0.3);
+            margin: 0 12px;
         }
 
         .repo-name {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            color: #c9d1d9;
+            color: rgba(255, 255, 255, 0.9);
             font-size: 14px;
+            font-weight: 500;
         }
 
-        .repo-name span {
-            color: #8b949e;
-        }
-
+        /* Container */
         .container {
             max-width: 1400px;
             margin: 0 auto;
-            padding: 24px 16px;
+            padding: 48px 32px;
         }
 
+        /* Header */
         .header {
-            margin-bottom: 32px;
+            margin-bottom: 60px;
             text-align: center;
         }
 
         .header h1 {
-            font-size: 36px;
-            margin-bottom: 8px;
-            color: #c9d1d9;
+            font-size: 42px;
+            margin-bottom: 12px;
+            color: #0F8A43;
+            font-weight: 700;
+            letter-spacing: -0.5px;
         }
 
         .header p {
-            color: #8b949e;
+            color: #5a7a6b;
             font-size: 16px;
-            margin-bottom: 16px;
+            margin-bottom: 32px;
+            font-weight: 400;
         }
 
+        /* Header Stats */
         .header-stats {
-            display: flex;
-            justify-content: center;
-            gap: 32px;
-            margin-top: 20px;
-            flex-wrap: wrap;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 24px;
+            margin-top: 40px;
         }
 
         .stat {
+            background: linear-gradient(135deg, #f5fdf9 0%, #e8f6f1 100%);
+            padding: 24px;
+            border-radius: 14px;
             text-align: center;
+            border: 1px solid #d0e8dd;
+            transition: all 0.3s ease;
+        }
+
+        .stat:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(15, 138, 67, 0.1);
+            border-color: #0F8A43;
         }
 
         .stat-number {
-            font-size: 28px;
+            font-size: 36px;
             font-weight: 700;
-            color: #58a6ff;
+            color: #0F8A43;
+            margin-bottom: 8px;
         }
 
         .stat-label {
-            color: #8b949e;
-            font-size: 12px;
+            color: #5a7a6b;
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
         }
 
+        /* Info Box */
+        .info-box {
+            background: linear-gradient(135deg, #f5fdf9 0%, #e8f6f1 100%);
+            border: 2px solid #0F8A43;
+            border-radius: 14px;
+            padding: 24px;
+            margin-bottom: 48px;
+        }
+
+        .info-box-title {
+            font-weight: 700;
+            color: #0F8A43;
+            margin-bottom: 12px;
+            font-size: 16px;
+        }
+
+        .info-box-text {
+            color: #5a7a6b;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        /* Search Box */
         .search-box {
-            margin-bottom: 32px;
+            margin-bottom: 48px;
             display: flex;
-            gap: 8px;
+            gap: 12px;
         }
 
         .search-input {
             flex: 1;
-            background-color: #0d1117;
-            border: 1px solid #30363d;
-            color: #c9d1d9;
-            padding: 10px 16px;
-            border-radius: 6px;
-            font-size: 14px;
+            background-color: #FFFFFF;
+            border: 2px solid #d0e8dd;
+            color: #1a472a;
+            padding: 14px 20px;
+            border-radius: 12px;
+            font-size: 15px;
+            font-weight: 500;
+            transition: all 0.3s ease;
         }
 
         .search-input::placeholder {
-            color: #8b949e;
+            color: #8a9b94;
         }
 
         .search-input:focus {
             outline: none;
-            border-color: #58a6ff;
-            box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.1);
+            border-color: #0F8A43;
+            box-shadow: 0 0 0 4px rgba(15, 138, 67, 0.1);
+            background-color: #fafffe;
         }
 
         .search-btn {
-            background-color: #238636;
+            background: linear-gradient(135deg, #0F8A43 0%, #0d6d36 100%);
             color: white;
             border: none;
-            padding: 10px 20px;
-            border-radius: 6px;
+            padding: 14px 32px;
+            border-radius: 12px;
             font-weight: 600;
             cursor: pointer;
-            transition: background-color 0.2s;
+            transition: all 0.3s ease;
+            font-size: 14px;
+            box-shadow: 0 4px 12px rgba(15, 138, 67, 0.2);
         }
 
         .search-btn:hover {
-            background-color: #2ea043;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(15, 138, 67, 0.3);
+            background: linear-gradient(135deg, #0d6d36 0%, #0a5229 100%);
         }
 
+        .search-btn:active {
+            transform: translateY(0);
+        }
+
+        /* Programs Grid */
         .programs-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 16px;
-            margin-bottom: 24px;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 28px;
+            margin-bottom: 60px;
         }
 
         .program-card {
-            background-color: #161b22;
-            border: 1px solid #30363d;
-            border-radius: 8px;
+            background: linear-gradient(135deg, #0F8A43 0%, #0d6d36 100%);
+            border-radius: 16px;
             overflow: hidden;
-            transition: all 0.3s;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
             cursor: pointer;
+            box-shadow: 0 4px 16px rgba(15, 138, 67, 0.12);
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
         .program-card:hover {
-            border-color: #58a6ff;
-            box-shadow: 0 0 0 1px rgba(88, 166, 255, 0.2);
-            transform: translateY(-2px);
+            transform: translateY(-8px);
+            box-shadow: 0 12px 32px rgba(15, 138, 67, 0.25);
+            border-color: rgba(255, 255, 255, 0.4);
         }
 
         .program-header {
-            background: linear-gradient(135deg, #1f6feb 0%, #238636 100%);
-            padding: 16px;
+            padding: 28px;
             color: white;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .program-header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .program-icon {
+            font-size: 40px;
+            margin-bottom: 16px;
+            display: block;
         }
 
         .program-name {
-            font-size: 16px;
-            font-weight: 600;
-            color: white;
-            margin-bottom: 4px;
+            font-size: 18px;
+            font-weight: 700;
+            color: #FFFFFF;
+            margin-bottom: 8px;
+            letter-spacing: -0.3px;
         }
 
         .program-docs-count {
-            font-size: 12px;
-            color: rgba(255, 255, 255, 0.8);
+            font-size: 13px;
+            color: rgba(255, 255, 255, 0.85);
+            font-weight: 500;
         }
 
         .program-content {
-            padding: 16px;
+            padding: 0 28px;
             max-height: 0;
             overflow: hidden;
-            transition: max-height 0.3s ease-out;
+            transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            background-color: #FFFFFF;
         }
 
         .program-card.expanded .program-content {
-            max-height: 600px;
+            max-height: 800px;
+            padding: 28px;
         }
 
+        /* Years Container */
         .years-container {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-            gap: 8px;
+            grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+            gap: 12px;
+            margin-bottom: 20px;
         }
 
         .year-section {
-            background-color: #0d1117;
-            border: 1px solid #30363d;
-            border-radius: 6px;
+            background: linear-gradient(135deg, #f5fdf9 0%, #e8f6f1 100%);
+            border: 1px solid #d0e8dd;
+            border-radius: 10px;
             padding: 12px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .year-section:hover {
+            border-color: #0F8A43;
+            box-shadow: 0 4px 12px rgba(15, 138, 67, 0.1);
+            transform: translateY(-2px);
         }
 
         .year-title {
             font-size: 12px;
-            font-weight: 600;
-            color: #58a6ff;
+            font-weight: 700;
+            color: #0F8A43;
             margin-bottom: 8px;
-            text-align: center;
         }
 
         .download-link {
             display: flex;
             align-items: center;
-            gap: 6px;
-            color: #58a6ff;
+            justify-content: center;
+            gap: 4px;
+            color: #0F8A43;
             text-decoration: none;
             font-size: 12px;
-            padding: 6px;
-            border-radius: 4px;
-            transition: background-color 0.2s;
+            font-weight: 600;
+            padding: 6px 8px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
         }
 
         .download-link:hover {
-            background-color: rgba(88, 166, 255, 0.1);
-            text-decoration: underline;
+            background-color: rgba(15, 138, 67, 0.1);
+            color: #0d6d36;
+            transform: scale(1.05);
         }
 
-        .info-box {
-            background-color: #0d1117;
-            border: 1px solid #30363d;
-            border-left: 3px solid #58a6ff;
-            border-radius: 6px;
-            padding: 16px;
-            margin-bottom: 24px;
-        }
-
-        .info-box-title {
-            font-weight: 600;
-            color: #58a6ff;
-            margin-bottom: 8px;
-        }
-
-        .info-box-text {
-            color: #8b949e;
-            font-size: 13px;
-        }
-
-        .badge {
-            display: inline-block;
-            background-color: #238636;
-            color: white;
-            padding: 4px 8px;
-            border-radius: 12px;
-            font-size: 11px;
-            font-weight: 600;
-            margin-bottom: 8px;
-        }
-
+        /* Buttons */
         .expand-btn {
             width: 100%;
             text-align: center;
-            padding: 8px;
-            background-color: #0d1117;
-            border: none;
-            color: #58a6ff;
+            padding: 12px;
+            background-color: transparent;
+            border: 2px solid #0F8A43;
+            color: #0F8A43;
             cursor: pointer;
-            font-size: 12px;
-            font-weight: 600;
-            border-top: 1px solid #30363d;
-            margin-top: 8px;
-            transition: background-color 0.2s;
+            font-size: 13px;
+            font-weight: 700;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            margin-top: 12px;
         }
 
         .expand-btn:hover {
-            background-color: #161b22;
+            background-color: #0F8A43;
+            color: #FFFFFF;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(15, 138, 67, 0.2);
         }
 
+        .expand-btn:active {
+            transform: translateY(0);
+        }
+
+        /* Footer */
         .footer {
             text-align: center;
-            padding: 24px;
-            color: #8b949e;
-            border-top: 1px solid #30363d;
-            margin-top: 40px;
-            font-size: 12px;
+            padding: 40px 32px;
+            color: #5a7a6b;
+            border-top: 2px solid #d0e8dd;
+            margin-top: 60px;
+            font-size: 13px;
+            font-weight: 500;
         }
 
+        .footer-logo {
+            font-size: 24px;
+            margin-bottom: 12px;
+        }
+
+        /* No Results */
         .no-results {
             text-align: center;
-            padding: 40px;
-            color: #8b949e;
+            padding: 80px 40px;
+            color: #5a7a6b;
+            font-size: 16px;
+            font-weight: 500;
         }
+
+        .no-results-icon {
+            font-size: 60px;
+            margin-bottom: 16px;
+            opacity: 0.6;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .navbar-content {
+                padding: 0 16px;
+            }
+
+            .container {
+                padding: 32px 16px;
+            }
+
+            .header h1 {
+                font-size: 32px;
+            }
+
+            .header p {
+                font-size: 14px;
+            }
+
+            .programs-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .header-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .search-box {
+                flex-direction: column;
+            }
+
+            .search-btn {
+                width: 100%;
+            }
+        }
+
+        /* Animación de entrada */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .program-card {
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+
+        .program-card:nth-child(1) { animation-delay: 0.1s; }
+        .program-card:nth-child(2) { animation-delay: 0.2s; }
+        .program-card:nth-child(3) { animation-delay: 0.3s; }
+        .program-card:nth-child(4) { animation-delay: 0.4s; }
+        .program-card:nth-child(n+5) { animation-delay: 0.5s; }
     </style>
 </head>
 <body>
@@ -304,12 +455,11 @@
     <div class="navbar">
         <div class="navbar-content">
             <a href="#" class="logo">
-                <span>🏥</span>
-                Secretaría de Salud
+                <span class="logo-icon">🏥</span>
+                <span>Secretaría de Salud</span>
             </a>
-            <div class="repo-name">
-                <span>archivo_salud</span>
-            </div>
+            <div class="navbar-divider"></div>
+            <div class="repo-name">Archivo Oficial de Programas</div>
         </div>
     </div>
 
@@ -317,37 +467,38 @@
     <div class="container">
         <!-- Header -->
         <div class="header">
-            <h1>📁 Archivo de Programas de Salud</h1>
-            <p>Documentación oficial de todos los programas de la Secretaría de Salud (2018-2026)</p>
+            <h1>📁 Archivo de Programas Institucionales</h1>
+            <p>Documentación oficial y centralizada de todos los programas de la Secretaría de Salud</p>
             
             <div class="header-stats">
                 <div class="stat">
                     <div class="stat-number">20</div>
-                    <div class="stat-label">PROGRAMAS</div>
+                    <div class="stat-label">Programas Activos</div>
                 </div>
                 <div class="stat">
                     <div class="stat-number">180+</div>
-                    <div class="stat-label">DOCUMENTOS</div>
+                    <div class="stat-label">Documentos Disponibles</div>
                 </div>
                 <div class="stat">
                     <div class="stat-number">9</div>
-                    <div class="stat-label">AÑOS (2018-2026)</div>
+                    <div class="stat-label">Años (2018-2026)</div>
                 </div>
             </div>
         </div>
 
         <!-- Info Box -->
         <div class="info-box">
-            <div class="info-box-title">ℹ️ Acceso a Documentación</div>
+            <div class="info-box-title">ℹ️ Acceso a Documentación Oficial</div>
             <div class="info-box-text">
-                Todos los archivos de los programas de la Secretaría de Salud están disponibles para descargar.
-                Haz clic en cualquier programa para expandir y ver los documentos de todos los años.
+                Sistema centralizado para consultar y descargar todos los documentos de los programas institucionales. 
+                Selecciona un programa para visualizar los archivos disponibles de cada año. Todos los documentos se encuentran 
+                organizados cronológicamente desde 2018 hasta la actualidad.
             </div>
         </div>
 
         <!-- Search Box -->
         <div class="search-box">
-            <input type="text" class="search-input" id="searchInput" placeholder="🔍 Busca un programa...">
+            <input type="text" class="search-input" id="searchInput" placeholder="🔍 Buscar programa...">
             <button class="search-btn">Buscar</button>
         </div>
 
@@ -358,7 +509,9 @@
 
         <!-- Footer -->
         <div class="footer">
-            <p>Secretaría de Salud © 2026 | Todos los documentos están disponibles para descarga</p>
+            <div class="footer-logo">🏛️</div>
+            <p>Secretaría de Salud © 2026 | Sistema de Archivo Institucional</p>
+            <p style="margin-top: 8px; font-size: 12px; color: #8a9b94;">Todos los documentos están disponibles para consulta y descarga por personal autorizado</p>
         </div>
     </div>
 
@@ -390,7 +543,6 @@
 
         function generateProgramCard(program) {
             const docsCount = years.length;
-            const programId = program.name.replace(/\s+/g, '-').toLowerCase();
             
             let yearSections = '';
             years.forEach(year => {
@@ -399,7 +551,7 @@
                     <div class="year-section">
                         <div class="year-title">${year}</div>
                         <a href="#" class="download-link" title="${fileName}">
-                            📄 ${year}
+                            📄 Descargar
                         </a>
                     </div>
                 `;
@@ -408,17 +560,17 @@
             return `
                 <div class="program-card" data-program="${program.name}">
                     <div class="program-header">
-                        <div style="font-size: 24px; margin-bottom: 8px;">${program.icon}</div>
+                        <span class="program-icon">${program.icon}</span>
                         <div class="program-name">${program.name}</div>
-                        <div class="program-docs-count">${docsCount} documentos disponibles</div>
+                        <div class="program-docs-count">${docsCount} documentos • Años 2018-2026</div>
                     </div>
                     <div class="program-content">
                         <div class="years-container">
                             ${yearSections}
                         </div>
-                        <button class="expand-btn">Ocultar documentos</button>
+                        <button class="expand-btn">✕ Cerrar</button>
                     </div>
-                    <button class="expand-btn" style="border-top: none; margin-top: 0;">+ Ver documentos</button>
+                    <button class="expand-btn" style="color: white; border-color: white; margin: 0;">+ Ver Documentos</button>
                 </div>
             `;
         }
@@ -427,7 +579,12 @@
             const grid = document.getElementById('programsGrid');
             
             if (programsToShow.length === 0) {
-                grid.innerHTML = '<div class="no-results">No se encontraron programas</div>';
+                grid.innerHTML = `
+                    <div class="no-results" style="grid-column: 1/-1;">
+                        <div class="no-results-icon">🔍</div>
+                        <div>No se encontraron programas</div>
+                    </div>
+                `;
                 return;
             }
 
@@ -436,11 +593,23 @@
             // Agregar event listeners a los botones
             document.querySelectorAll('.program-card').forEach(card => {
                 const expandBtns = card.querySelectorAll('.expand-btn');
-                expandBtns[0].addEventListener('click', (e) => {
+                
+                expandBtns[1].addEventListener('click', (e) => {
                     e.stopPropagation();
                     card.classList.toggle('expanded');
-                    expandBtns[0].textContent = card.classList.contains('expanded') ? 'Ocultar documentos' : 'Ver documentos';
-                    expandBtns[1].style.display = card.classList.contains('expanded') ? 'none' : 'block';
+                    if (card.classList.contains('expanded')) {
+                        expandBtns[1].textContent = '✕ Cerrar';
+                        expandBtns[1].style.display = 'none';
+                    } else {
+                        expandBtns[1].textContent = '+ Ver Documentos';
+                    }
+                });
+
+                expandBtns[0].addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    card.classList.remove('expanded');
+                    expandBtns[1].textContent = '+ Ver Documentos';
+                    expandBtns[1].style.display = 'block';
                 });
             });
         }
