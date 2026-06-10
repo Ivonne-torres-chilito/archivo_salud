@@ -28,7 +28,7 @@
         }
 
         .navbar-content {
-            max-width: 1280px;
+            max-width: 1400px;
             margin: 0 auto;
             padding: 0 16px;
             display: flex;
@@ -58,223 +58,179 @@
         }
 
         .container {
-            max-width: 1280px;
+            max-width: 1400px;
             margin: 0 auto;
             padding: 24px 16px;
         }
 
         .header {
             margin-bottom: 32px;
+            text-align: center;
         }
 
         .header h1 {
-            font-size: 32px;
+            font-size: 36px;
             margin-bottom: 8px;
             color: #c9d1d9;
         }
 
         .header p {
             color: #8b949e;
-            font-size: 14px;
-        }
-
-        .tabs {
-            display: flex;
-            gap: 24px;
-            border-bottom: 1px solid #30363d;
-            margin-bottom: 24px;
-            padding-bottom: 16px;
-        }
-
-        .tab {
-            color: #8b949e;
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: 500;
-            cursor: pointer;
-            border-bottom: 2px solid transparent;
-            padding-bottom: 8px;
-        }
-
-        .tab.active {
-            color: #58a6ff;
-            border-bottom-color: #58a6ff;
-        }
-
-        .release-card {
-            background-color: #161b22;
-            border: 1px solid #30363d;
-            border-radius: 6px;
-            padding: 24px;
+            font-size: 16px;
             margin-bottom: 16px;
         }
 
-        .release-header {
+        .header-stats {
             display: flex;
-            align-items: center;
-            gap: 12px;
-            margin-bottom: 16px;
-        }
-
-        .release-tag {
-            background-color: #238636;
-            color: white;
-            padding: 4px 12px;
-            border-radius: 24px;
-            font-size: 12px;
-            font-weight: 600;
-        }
-
-        .release-title {
-            font-size: 20px;
-            font-weight: 600;
-            color: #58a6ff;
-            text-decoration: none;
-        }
-
-        .release-title:hover {
-            text-decoration: underline;
-        }
-
-        .release-date {
-            color: #8b949e;
-            font-size: 12px;
-            margin-top: 8px;
-        }
-
-        .release-description {
-            color: #c9d1d9;
-            margin: 16px 0;
-            padding: 12px;
-            background-color: #0d1117;
-            border-left: 3px solid #58a6ff;
-            border-radius: 4px;
-        }
-
-        .assets {
+            justify-content: center;
+            gap: 32px;
             margin-top: 20px;
+            flex-wrap: wrap;
         }
 
-        .assets-title {
-            font-size: 12px;
-            font-weight: 600;
-            color: #8b949e;
-            text-transform: uppercase;
-            margin-bottom: 12px;
+        .stat {
+            text-align: center;
         }
 
-        .asset {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 12px;
-            background-color: #0d1117;
-            border: 1px solid #30363d;
-            border-radius: 6px;
-            margin-bottom: 8px;
-            transition: background-color 0.2s;
-        }
-
-        .asset:hover {
-            background-color: #161b22;
-        }
-
-        .asset-info {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .asset-icon {
-            font-size: 18px;
-        }
-
-        .asset-details {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .asset-name {
+        .stat-number {
+            font-size: 28px;
+            font-weight: 700;
             color: #58a6ff;
-            text-decoration: none;
-            font-size: 14px;
-            font-weight: 500;
         }
 
-        .asset-name:hover {
-            text-decoration: underline;
-        }
-
-        .asset-size {
+        .stat-label {
             color: #8b949e;
             font-size: 12px;
         }
 
-        .download-btn {
-            background-color: #238636;
-            color: white;
-            border: none;
-            padding: 6px 12px;
-            border-radius: 6px;
-            font-size: 12px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: background-color 0.2s;
-        }
-
-        .download-btn:hover {
-            background-color: #2ea043;
-        }
-
-        .actions {
+        .search-box {
+            margin-bottom: 32px;
             display: flex;
-            gap: 12px;
-            margin-top: 20px;
-            padding-top: 16px;
-            border-top: 1px solid #30363d;
-        }
-
-        .btn {
-            background-color: #238636;
-            color: white;
-            border: none;
-            padding: 8px 16px;
-            border-radius: 6px;
-            font-size: 12px;
-            font-weight: 600;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
             gap: 8px;
+        }
+
+        .search-input {
+            flex: 1;
+            background-color: #0d1117;
+            border: 1px solid #30363d;
+            color: #c9d1d9;
+            padding: 10px 16px;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        .search-input::placeholder {
+            color: #8b949e;
+        }
+
+        .search-input:focus {
+            outline: none;
+            border-color: #58a6ff;
+            box-shadow: 0 0 0 3px rgba(88, 166, 255, 0.1);
+        }
+
+        .search-btn {
+            background-color: #238636;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
             transition: background-color 0.2s;
         }
 
-        .btn:hover {
+        .search-btn:hover {
             background-color: #2ea043;
         }
 
-        .btn-secondary {
-            background-color: #21262d;
-            color: #58a6ff;
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+
+        .program-card {
+            background-color: #161b22;
             border: 1px solid #30363d;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s;
+            cursor: pointer;
         }
 
-        .btn-secondary:hover {
-            background-color: #30363d;
+        .program-card:hover {
+            border-color: #58a6ff;
+            box-shadow: 0 0 0 1px rgba(88, 166, 255, 0.2);
+            transform: translateY(-2px);
         }
 
-        .badge {
-            background-color: #1f6feb;
+        .program-header {
+            background: linear-gradient(135deg, #1f6feb 0%, #238636 100%);
+            padding: 16px;
             color: white;
-            padding: 2px 8px;
-            border-radius: 12px;
-            font-size: 11px;
-            font-weight: 600;
         }
 
-        .badge.latest {
-            background-color: #238636;
+        .program-name {
+            font-size: 16px;
+            font-weight: 600;
+            color: white;
+            margin-bottom: 4px;
+        }
+
+        .program-docs-count {
+            font-size: 12px;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .program-content {
+            padding: 16px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+        .program-card.expanded .program-content {
+            max-height: 600px;
+        }
+
+        .years-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            gap: 8px;
+        }
+
+        .year-section {
+            background-color: #0d1117;
+            border: 1px solid #30363d;
+            border-radius: 6px;
+            padding: 12px;
+        }
+
+        .year-title {
+            font-size: 12px;
+            font-weight: 600;
+            color: #58a6ff;
+            margin-bottom: 8px;
+            text-align: center;
+        }
+
+        .download-link {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: #58a6ff;
+            text-decoration: none;
+            font-size: 12px;
+            padding: 6px;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+
+        .download-link:hover {
+            background-color: rgba(88, 166, 255, 0.1);
+            text-decoration: underline;
         }
 
         .info-box {
@@ -296,6 +252,51 @@
             color: #8b949e;
             font-size: 13px;
         }
+
+        .badge {
+            display: inline-block;
+            background-color: #238636;
+            color: white;
+            padding: 4px 8px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .expand-btn {
+            width: 100%;
+            text-align: center;
+            padding: 8px;
+            background-color: #0d1117;
+            border: none;
+            color: #58a6ff;
+            cursor: pointer;
+            font-size: 12px;
+            font-weight: 600;
+            border-top: 1px solid #30363d;
+            margin-top: 8px;
+            transition: background-color 0.2s;
+        }
+
+        .expand-btn:hover {
+            background-color: #161b22;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 24px;
+            color: #8b949e;
+            border-top: 1px solid #30363d;
+            margin-top: 40px;
+            font-size: 12px;
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 40px;
+            color: #8b949e;
+        }
     </style>
 </head>
 <body>
@@ -303,13 +304,11 @@
     <div class="navbar">
         <div class="navbar-content">
             <a href="#" class="logo">
-                <span>🐙</span>
-                GitHub
+                <span>🏥</span>
+                Secretaría de Salud
             </a>
             <div class="repo-name">
-                <span>ivonne-torres-chilito</span>
-                /
-                <strong>archivo_salud</strong>
+                <span>archivo_salud</span>
             </div>
         </div>
     </div>
@@ -318,128 +317,149 @@
     <div class="container">
         <!-- Header -->
         <div class="header">
-            <h1>📁 archivo_salud</h1>
-            <p>Archivos de la Secretaría de Salud - Documentación oficial</p>
-        </div>
-
-        <!-- Tabs -->
-        <div class="tabs">
-            <a href="#" class="tab">📝 Code</a>
-            <a href="#" class="tab">🔍 Issues</a>
-            <a href="#" class="tab">📬 Pull requests</a>
-            <a href="#" class="tab active">📦 Releases</a>
-            <a href="#" class="tab">📊 Projects</a>
+            <h1>📁 Archivo de Programas de Salud</h1>
+            <p>Documentación oficial de todos los programas de la Secretaría de Salud (2018-2026)</p>
+            
+            <div class="header-stats">
+                <div class="stat">
+                    <div class="stat-number">20</div>
+                    <div class="stat-label">PROGRAMAS</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">180+</div>
+                    <div class="stat-label">DOCUMENTOS</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-number">9</div>
+                    <div class="stat-label">AÑOS (2018-2026)</div>
+                </div>
+            </div>
         </div>
 
         <!-- Info Box -->
         <div class="info-box">
-            <div class="info-box-title">ℹ️ Descarga segura de archivos</div>
+            <div class="info-box-title">ℹ️ Acceso a Documentación</div>
             <div class="info-box-text">
-                Este repositorio contiene los documentos oficiales de la Secretaría de Salud. 
-                Puedes descargar los archivos desde los Releases sin necesidad de acceso especial.
+                Todos los archivos de los programas de la Secretaría de Salud están disponibles para descargar.
+                Haz clic en cualquier programa para expandir y ver los documentos de todos los años.
             </div>
         </div>
 
-        <!-- Release Card -->
-        <div class="release-card">
-            <div class="release-header">
-                <span class="release-tag">v1.0</span>
-                <span class="badge latest">Latest</span>
-            </div>
-            
-            <a href="#" class="release-title">Documentos Salud - Junio 2026</a>
-            <div class="release-date">Published on Jun 10, 2026 by Ivonne Torres</div>
+        <!-- Search Box -->
+        <div class="search-box">
+            <input type="text" class="search-input" id="searchInput" placeholder="🔍 Busca un programa...">
+            <button class="search-btn">Buscar</button>
+        </div>
 
-            <div class="release-description">
-                <strong>📋 Contenido incluido:</strong><br>
-                ✅ Políticas y procedimientos<br>
-                ✅ Documentación general<br>
-                ✅ Reportes mensuales<br>
-                ✅ Guías administrativas<br><br>
-                <strong>Descarga los archivos desde la sección Assets abajo.</strong>
-            </div>
+        <!-- Programs Grid -->
+        <div class="programs-grid" id="programsGrid">
+            <!-- Los programas se generarán aquí con JavaScript -->
+        </div>
 
-            <!-- Assets -->
-            <div class="assets">
-                <div class="assets-title">📥 Assets</div>
-                
-                <div class="asset">
-                    <div class="asset-info">
-                        <span class="asset-icon">📄</span>
-                        <div class="asset-details">
-                            <a href="#" class="asset-name">Politicas_Procedimientos.pdf</a>
-                            <span class="asset-size">2.5 MB</span>
-                        </div>
-                    </div>
-                    <button class="download-btn">⬇️ Descargar</button>
-                </div>
-
-                <div class="asset">
-                    <div class="asset-info">
-                        <span class="asset-icon">📊</span>
-                        <div class="asset-details">
-                            <a href="#" class="asset-name">Reportes_Junio_2026.xlsx</a>
-                            <span class="asset-size">1.2 MB</span>
-                        </div>
-                    </div>
-                    <button class="download-btn">⬇️ Descargar</button>
-                </div>
-
-                <div class="asset">
-                    <div class="asset-info">
-                        <span class="asset-icon">📑</span>
-                        <div class="asset-details">
-                            <a href="#" class="asset-name">Documentacion_General.docx</a>
-                            <span class="asset-size">850 KB</span>
-                        </div>
-                    </div>
-                    <button class="download-btn">⬇️ Descargar</button>
-                </div>
-
-                <div class="asset">
-                    <div class="asset-info">
-                        <span class="asset-icon">📋</span>
-                        <div class="asset-details">
-                            <a href="#" class="asset-name">Guias_Administrativas.pdf</a>
-                            <span class="asset-size">1.8 MB</span>
-                        </div>
-                    </div>
-                    <button class="download-btn">⬇️ Descargar</button>
-                </div>
-
-                <div class="asset">
-                    <div class="asset-info">
-                        <span class="asset-icon">📦</span>
-                        <div class="asset-details">
-                            <a href="#" class="asset-name">Source code (zip)</a>
-                            <span class="asset-size">6.4 MB</span>
-                        </div>
-                    </div>
-                    <button class="download-btn">⬇️ Descargar</button>
-                </div>
-
-                <div class="asset">
-                    <div class="asset-info">
-                        <span class="asset-icon">📦</span>
-                        <div class="asset-details">
-                            <a href="#" class="asset-name">Source code (tar.gz)</a>
-                            <span class="asset-size">5.9 MB</span>
-                        </div>
-                    </div>
-                    <button class="download-btn">⬇️ Descargar</button>
-                </div>
-            </div>
-
-            <!-- Actions -->
-            <div class="actions">
-                <button class="btn">
-                    ⭐ Star
-                </button>
-                <button class="btn btn-secondary">
-                    🔗 Copy link
-                </button>
-            </div>
+        <!-- Footer -->
+        <div class="footer">
+            <p>Secretaría de Salud © 2026 | Todos los documentos están disponibles para descarga</p>
         </div>
     </div>
+
+    <script>
+        const programs = [
+            { name: "ALIMENTOS Y BEBIDAS", icon: "🍽️" },
+            { name: "ASEGURAMIENTO", icon: "🛡️" },
+            { name: "DEFENSORÍA DEL PACIENTE", icon: "⚖️" },
+            { name: "EMERGENCIAS Y DESASTRES", icon: "🚨" },
+            { name: "JUAN CARLOS MOSQUERA", icon: "📋" },
+            { name: "JURÍDICO", icon: "📜" },
+            { name: "PIC CRÓNICAS", icon: "🏥" },
+            { name: "PLANES DE AUDITORÍAS", icon: "📊" },
+            { name: "PROGRAMA TB-HANSEN", icon: "🔬" },
+            { name: "PROMOCIÓN SOCIAL", icon: "🤝" },
+            { name: "PROTECCIÓN LABORAL", icon: "👷" },
+            { name: "SALUD INFANTIL", icon: "👶" },
+            { name: "SALUD MENTAL", icon: "🧠" },
+            { name: "SALUD ORAL", icon: "🦷" },
+            { name: "SALUD PÚBLICA", icon: "🌍" },
+            { name: "SALUD SEXUAL Y REPRODUCTIVA", icon: "❤️" },
+            { name: "SANEAMIENTO AMBIENTAL", icon: "🌱" },
+            { name: "VIGILANCIA EPIDEMIOLÓGICA", icon: "🔍" },
+            { name: "ZOONOSIS", icon: "🦠" },
+            { name: "PARTICIPACIÓN SOCIAL", icon: "👥" }
+        ];
+
+        const years = [2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026];
+
+        function generateProgramCard(program) {
+            const docsCount = years.length;
+            const programId = program.name.replace(/\s+/g, '-').toLowerCase();
+            
+            let yearSections = '';
+            years.forEach(year => {
+                const fileName = `${program.name.replace(/\s+/g, '_')}_${year}.pdf`;
+                yearSections += `
+                    <div class="year-section">
+                        <div class="year-title">${year}</div>
+                        <a href="#" class="download-link" title="${fileName}">
+                            📄 ${year}
+                        </a>
+                    </div>
+                `;
+            });
+
+            return `
+                <div class="program-card" data-program="${program.name}">
+                    <div class="program-header">
+                        <div style="font-size: 24px; margin-bottom: 8px;">${program.icon}</div>
+                        <div class="program-name">${program.name}</div>
+                        <div class="program-docs-count">${docsCount} documentos disponibles</div>
+                    </div>
+                    <div class="program-content">
+                        <div class="years-container">
+                            ${yearSections}
+                        </div>
+                        <button class="expand-btn">Ocultar documentos</button>
+                    </div>
+                    <button class="expand-btn" style="border-top: none; margin-top: 0;">+ Ver documentos</button>
+                </div>
+            `;
+        }
+
+        function renderPrograms(programsToShow = programs) {
+            const grid = document.getElementById('programsGrid');
+            
+            if (programsToShow.length === 0) {
+                grid.innerHTML = '<div class="no-results">No se encontraron programas</div>';
+                return;
+            }
+
+            grid.innerHTML = programsToShow.map(program => generateProgramCard(program)).join('');
+            
+            // Agregar event listeners a los botones
+            document.querySelectorAll('.program-card').forEach(card => {
+                const expandBtns = card.querySelectorAll('.expand-btn');
+                expandBtns[0].addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    card.classList.toggle('expanded');
+                    expandBtns[0].textContent = card.classList.contains('expanded') ? 'Ocultar documentos' : 'Ver documentos';
+                    expandBtns[1].style.display = card.classList.contains('expanded') ? 'none' : 'block';
+                });
+            });
+        }
+
+        // Búsqueda
+        document.getElementById('searchInput').addEventListener('keyup', (e) => {
+            const searchTerm = e.target.value.toLowerCase();
+            const filtered = programs.filter(program => 
+                program.name.toLowerCase().includes(searchTerm)
+            );
+            renderPrograms(filtered);
+        });
+
+        document.querySelector('.search-btn').addEventListener('click', () => {
+            document.getElementById('searchInput').focus();
+        });
+
+        // Renderizar programas inicialmente
+        renderPrograms();
+    </script>
 </body>
 </html>
