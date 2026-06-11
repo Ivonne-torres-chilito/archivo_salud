@@ -711,11 +711,11 @@
         <!-- Stats Grid -->
         <div class="stats-grid" id="statsGrid">
             <div class="stat-card scroll-observe">
-                <div class="stat-number" data-target="20">0</div>
+                <div class="stat-number" data-target="23">0</div>
                 <div class="stat-label">Programas Activos</div>
             </div>
             <div class="stat-card scroll-observe">
-                <div class="stat-number" data-target="180">0</div>
+                <div class="stat-number" data-target="207">0</div>
                 <div class="stat-label">Documentos</div>
             </div>
             <div class="stat-card scroll-observe">
@@ -765,26 +765,29 @@
     <script>
         // Data
         const programs = [
-            { name: "ALIMENTOS Y BEBIDAS", icon: "🍽️", category: "regulatorio" },
-            { name: "ASEGURAMIENTO", icon: "🛡️", category: "servicios" },
+            { name: "ATENCIÓN PRIMARIA EN SALUD (APS)", icon: "🏥", category: "servicios" },
+            { name: "CONTRATO INTERADMINISTRATIVO", icon: "📋", category: "administrativo" },
             { name: "DEFENSORÍA DEL PACIENTE", icon: "⚖️", category: "derechos" },
+            { name: "DESPACHO", icon: "👔", category: "administrativo" },
             { name: "EMERGENCIAS Y DESASTRES", icon: "🚨", category: "respuesta" },
-            { name: "JUAN CARLOS MOSQUERA", icon: "📋", category: "programas" },
-            { name: "JURÍDICO", icon: "📜", category: "legal" },
-            { name: "PIC CRÓNICAS", icon: "🏥", category: "salud" },
-            { name: "PLANES DE AUDITORÍAS", icon: "📊", category: "control" },
-            { name: "PROGRAMA TB-HANSEN", icon: "🔬", category: "salud" },
+            { name: "ENFERMEDADES CRÓNICAS NO TRANSMISIBLES", icon: "🏥", category: "salud" },
+            { name: "NUTRICIÓN", icon: "🥗", category: "salud" },
+            { name: "PARTICIPACIÓN SOCIAL", icon: "👥", category: "participacion" },
+            { name: "PIC PROGRAMAS", icon: "📊", category: "programas" },
+            { name: "PLANES DE AUDITORÍAS", icon: "📑", category: "control" },
+            { name: "PROGRAMA AMPLIADA EN INMUNIZACIONES", icon: "💉", category: "salud" },
             { name: "PROMOCIÓN SOCIAL", icon: "🤝", category: "social" },
-            { name: "PROTECCIÓN LABORAL", icon: "👷", category: "laboral" },
+            { name: "SALUD BUCAL", icon: "🦷", category: "salud" },
             { name: "SALUD INFANTIL", icon: "👶", category: "salud" },
             { name: "SALUD MENTAL", icon: "🧠", category: "salud" },
-            { name: "SALUD ORAL", icon: "🦷", category: "salud" },
             { name: "SALUD PÚBLICA", icon: "🌍", category: "salud" },
             { name: "SALUD SEXUAL Y REPRODUCTIVA", icon: "❤️", category: "salud" },
-            { name: "SANEAMIENTO AMBIENTAL", icon: "🌱", category: "ambiental" },
+            { name: "SANEAMIENTO BÁSICO", icon: "🌱", category: "ambiental" },
+            { name: "TÉCNICOS", icon: "🔧", category: "administrativo" },
+            { name: "TUBERCULOSIS Y HANSEN", icon: "🔬", category: "salud" },
+            { name: "VECTORES", icon: "🦟", category: "vigilancia" },
             { name: "VIGILANCIA EPIDEMIOLÓGICA", icon: "🔍", category: "vigilancia" },
-            { name: "ZOONOSIS", icon: "🦠", category: "salud" },
-            { name: "PARTICIPACIÓN SOCIAL", icon: "👥", category: "participacion" }
+            { name: "ZOONOSIS", icon: "🦠", category: "vigilancia" }
         ];
 
         const years = [2018, 2019, 2020, 2021, 2022, 2023, 2024, 2025, 2026];
