@@ -449,6 +449,7 @@
             text-align: center;
             transition: all 0.3s ease;
             cursor: pointer;
+            position: relative;
         }
 
         .year-card:hover {
@@ -456,6 +457,22 @@
             background: var(--accent-light);
             transform: translateY(-3px);
             box-shadow: var(--shadow-md);
+        }
+
+        .year-card.has-drive::after {
+            content: '☁️';
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            font-size: 18px;
+            background: var(--bg-primary);
+            border-radius: 50%;
+            width: 28px;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 2px solid var(--accent-primary);
         }
 
         .year-label {
@@ -483,6 +500,19 @@
         .download-btn:hover {
             background: var(--accent-light);
             color: var(--accent-dark);
+        }
+
+        .drive-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            background: linear-gradient(135deg, #4285F4 0%, #1F73E7 100%);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 10px;
+            font-weight: 700;
+            margin-top: 6px;
         }
 
         .expand-toggle {
@@ -765,7 +795,7 @@
     <script>
         // Data
         const programs = [
-            { name: "ALIMENTOS Y BEBIDAS", icon: "🍽️", category: "regulatorio" },
+            { name: "ALIMENTOS Y BEBIDAS", icon: "🍽️", category: "regulatorio", drives: { 2018: "https://drive.google.com/drive/folders/12M_gLPQZvz03Q8gg5KqB2RIlZmEZCq5r?usp=drive_link" } },
             { name: "ATENCIÓN PRIMARIA EN SALUD (APS)", icon: "🏥", category: "servicios" },
             { name: "CONTRATO INTERADMINISTRATIVO", icon: "📋", category: "administrativo" },
             { name: "DEFENSORÍA DEL PACIENTE", icon: "⚖️", category: "derechos" },
@@ -819,12 +849,16 @@
             let yearCards = '';
             years.forEach(year => {
                 const fileName = `${program.name.replace(/\s+/g, '_')}_${year}.pdf`;
+                const hasDrive = program.drives && program.drives[year];
+                const driveLink = hasDrive ? program.drives[year] : '#';
+                
                 yearCards += `
-                    <div class="year-card">
+                    <div class="year-card ${hasDrive ? 'has-drive' : ''}">
                         <div class="year-label">${year}</div>
-                        <a href="#" class="download-btn" title="Descargar ${fileName}">
-                            📥 Ver
+                        <a href="${driveLink}" target="_blank" rel="noopener noreferrer" class="download-btn" title="Descargar ${fileName}">
+                            ${hasDrive ? '☁️ Drive' : '📥 Ver'}
                         </a>
+                        ${hasDrive ? '<div class="drive-badge">📁 Google Drive</div>' : ''}
                     </div>
                 `;
             });
